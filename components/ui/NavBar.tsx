@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { cn } from "@/lib/utils";
+import { siteConfig, socialLinks } from "@/data/site";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -14,6 +15,7 @@ const NAV_LINKS = [
 
 export function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const githubLink = socialLinks.find((link) => link.platform === "github");
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-sm bg-background/80 border-b border-border">
@@ -22,7 +24,7 @@ export function NavBar() {
           href="#hero"
           className="font-mono font-bold text-accent cursor-pointer transition-colors duration-200 hover:text-foreground"
         >
-          ~/japh
+          {siteConfig.brand}
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -35,15 +37,17 @@ export function NavBar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub profile"
-            className="text-muted hover:text-accent transition-colors duration-200 cursor-pointer"
-          >
-            <GithubIcon className="w-5 h-5" />
-          </a>
+          {githubLink && (
+            <a
+              href={githubLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${githubLink.label} profile`}
+              className="text-muted hover:text-accent transition-colors duration-200 cursor-pointer"
+            >
+              <GithubIcon className="w-5 h-5" />
+            </a>
+          )}
         </div>
 
         <button
@@ -74,16 +78,18 @@ export function NavBar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub profile"
-            onClick={() => setIsOpen(false)}
-            className="font-mono text-sm uppercase tracking-wide text-muted hover:text-accent transition-colors duration-200 cursor-pointer py-2 inline-flex items-center gap-2"
-          >
-            <GithubIcon className="w-4 h-4" /> GitHub
-          </a>
+          {githubLink && (
+            <a
+              href={githubLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${githubLink.label} profile`}
+              onClick={() => setIsOpen(false)}
+              className="font-mono text-sm uppercase tracking-wide text-muted hover:text-accent transition-colors duration-200 cursor-pointer py-2 inline-flex items-center gap-2"
+            >
+              <GithubIcon className="w-4 h-4" /> {githubLink.label}
+            </a>
+          )}
         </div>
       </div>
     </header>

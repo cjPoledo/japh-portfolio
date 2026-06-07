@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { ScrollReveal } from "@/components/effects/ScrollReveal";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import { projects, type ProjectCategory } from "@/data/projects";
+import { sectionHeadings } from "@/data/site";
 
 type Filter = "All" | ProjectCategory;
 
@@ -20,7 +21,7 @@ export function Projects() {
     <section id="projects" className="py-24 px-6 md:px-12 max-w-6xl mx-auto">
       <ScrollReveal>
         <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground">
-          03. Projects
+          {sectionHeadings.projects}
         </h2>
         <span aria-hidden className="block w-16 h-1 bg-accent mt-3" />
       </ScrollReveal>

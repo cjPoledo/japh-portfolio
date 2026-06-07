@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Inter } from "next/font/google";
 import { NavBar } from "@/components/ui/NavBar";
+import { siteConfig } from "@/data/site";
 import "./globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -16,9 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Japh — Developer",
-  description:
-    "I build things that work. Portfolio of tools, websites, webapps, games, and software.",
+  title: siteConfig.title,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({
