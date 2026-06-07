@@ -48,8 +48,10 @@ export function TerminalText({
           setDisplayText(currentWord.slice(0, displayText.length - 1));
         }, deletingSpeedMs);
       } else {
-        setWordIndex((index) => (index + 1) % words.length);
-        setPhase("typing");
+        timeoutId = setTimeout(() => {
+          setWordIndex((index) => (index + 1) % words.length);
+          setPhase("typing");
+        }, deletingSpeedMs);
       }
     }
 

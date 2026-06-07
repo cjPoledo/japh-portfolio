@@ -31,6 +31,7 @@ export default function RootLayout({
       lang="en"
       className={`${jetbrainsMono.variable} ${inter.variable} dark`}
       style={{ colorScheme: "dark" }}
+      data-scroll-behavior="smooth"
     >
       <body className="bg-background text-foreground font-sans antialiased">
         <NavBar />
