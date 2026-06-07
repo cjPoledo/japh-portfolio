@@ -37,6 +37,13 @@ export function NavBar() {
               {link.label}
             </a>
           ))}
+          <a
+            href={siteConfig.resumeUrl}
+            download
+            className="font-mono text-sm uppercase tracking-wide text-muted hover:text-accent transition-colors duration-200 cursor-pointer"
+          >
+            Resume
+          </a>
           {githubLink && (
             <a
               href={githubLink.url}
@@ -78,6 +85,14 @@ export function NavBar() {
               {link.label}
             </a>
           ))}
+          <a
+            href={siteConfig.resumeUrl}
+            download
+            onClick={() => setIsOpen(false)}
+            className="font-mono text-sm uppercase tracking-wide text-muted hover:text-accent transition-colors duration-200 cursor-pointer py-2"
+          >
+            Resume
+          </a>
           {githubLink && (
             <a
               href={githubLink.url}

@@ -4,6 +4,7 @@ export interface SiteConfig {
   title: string;
   description: string;
   footerTagline: string;
+  resumeUrl: string;
 }
 
 export const siteConfig: SiteConfig = {
@@ -13,6 +14,7 @@ export const siteConfig: SiteConfig = {
   description:
     "I build things that work. Portfolio of tools, websites, webapps, games, and software.",
   footerTagline: "built with Next.js & a lot of coffee.",
+  resumeUrl: "/PoledoCJ_CV.pdf",
 };
 
 export interface HeroContent {
