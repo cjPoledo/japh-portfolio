@@ -1,20 +1,24 @@
 export interface SiteConfig {
   name: string;
+  fullName: string;
   brand: string;
   title: string;
   description: string;
   footerTagline: string;
   resumeUrl: string;
+  siteUrl: string;
 }
 
 export const siteConfig: SiteConfig = {
   name: "Japh",
+  fullName: "Clent Japhet Poledo",
   brand: "~/japh",
   title: "Japh — Developer",
   description:
     "I build things that work. Portfolio of tools, websites, webapps, games, and software.",
   footerTagline: "built with Next.js & a lot of coffee.",
   resumeUrl: "/PoledoCJ_CV.pdf",
+  siteUrl: "https://japhlab.com",
 };
 
 export interface HeroContent {
