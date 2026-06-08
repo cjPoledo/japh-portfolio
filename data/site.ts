@@ -29,7 +29,13 @@ export const heroContent: HeroContent = {
   rolePrefix: "I'm a ",
 };
 
-export type SkillCategoryName = "Languages" | "Frameworks" | "Tools" | "Infra";
+export type SkillCategoryName =
+  | "Languages"
+  | "Frontend"
+  | "Backend & Data"
+  | "AI / ML"
+  | "Game Dev"
+  | "Tools & Infra";
 
 export interface SkillGroup {
   category: SkillCategoryName;
@@ -48,10 +54,65 @@ export const aboutContent: AboutContent = {
     "When I'm not at the keyboard, I'm probably reading about the next thing I want to build, or figuring out why the last thing broke in production.",
   ],
   skills: [
-    { category: "Languages", items: ["TypeScript", "JavaScript", "Python", "Go"] },
-    { category: "Frameworks", items: ["React", "Next.js", "Node.js", "Tailwind CSS"] },
-    { category: "Tools", items: ["Git", "VS Code", "Figma", "Postman"] },
-    { category: "Infra", items: ["Docker", "Vercel", "AWS", "GitHub Actions"] },
+    {
+      category: "Languages",
+      items: [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "PHP",
+        "GDScript",
+        "C",
+        "C++",
+        "C#",
+        "Java",
+      ],
+    },
+    {
+      category: "Frontend",
+      items: ["HTML & CSS", "React", "Next.js", "Tailwind CSS", "WordPress"],
+    },
+    {
+      category: "Backend & Data",
+      items: [
+        "Node.js",
+        "Express.js",
+        "Django",
+        "REST API",
+        "Prisma",
+        "Supabase",
+        "PostgreSQL",
+        "MCP Server",
+      ],
+    },
+    {
+      category: "AI / ML",
+      items: [
+        "Deep Learning",
+        "Computer Vision",
+        "PyTorch",
+        "TensorFlow",
+        "YOLO",
+        "CVAT",
+        "Roboflow",
+      ],
+    },
+    { category: "Game Dev", items: ["Godot", "Unity", "Aseprite"] },
+    {
+      category: "Tools & Infra",
+      items: [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma",
+        "Postman",
+        "Docker",
+        "Vercel",
+        "AWS",
+        "Linux Server",
+        "Zsh / Bash",
+      ],
+    },
   ],
 };
 
@@ -65,27 +126,28 @@ export interface ExperienceEntry {
 
 export const experienceEntries: ExperienceEntry[] = [
   {
-    role: "Software Engineer",
-    org: "Acme Corp",
-    startDate: "2023",
+    role: "Freelance Developer & IT Consultant",
+    org: "Self-employed",
+    startDate: "2026",
     endDate: "Present",
     description:
-      "Building and maintaining core product features in a fast-moving full-stack team.",
+      "Build websites and custom systems for clients, and consult on IT and systems-related concerns.",
   },
   {
-    role: "Frontend Developer",
-    org: "Startup Studio",
-    startDate: "2021",
+    role: "Junior ICT Assistant",
+    org: "Quality Assurance Office, University of the Philippines Mindanao",
+    startDate: "2024",
+    endDate: "Present",
+    description:
+      "Built QA and office management systems and the office's website, while supporting university events as on-site tech and handling ad hoc requests from the director.",
+  },
+  {
+    role: "Student Intern",
+    org: "ASIMOV-HAWKS",
+    startDate: "2023",
     endDate: "2023",
     description:
-      "Shipped customer-facing web apps from prototype to production for early-stage startups.",
-  },
-  {
-    role: "Junior Developer",
-    org: "Freelance",
-    startDate: "2020",
-    endDate: "2021",
-    description: "Built small business websites and internal tools for local clients.",
+      "Annotated datasets and trained computer vision models, then read research papers and wrote technical reports on the findings.",
   },
 ];
 
@@ -96,7 +158,7 @@ export interface ContactContent {
 
 export const contactContent: ContactContent = {
   tagline: "Got something interesting to build? Let's talk.",
-  email: "you@example.com",
+  email: "cjpoledo26@gmail.com",
 };
 
 export type SocialPlatform = "github" | "linkedin";
@@ -108,8 +170,12 @@ export interface SocialLink {
 }
 
 export const socialLinks: SocialLink[] = [
-  { platform: "github", label: "GitHub", url: "https://github.com/yourname" },
-  { platform: "linkedin", label: "LinkedIn", url: "https://linkedin.com/in/yourname" },
+  { platform: "github", label: "GitHub", url: "https://github.com/cjPoledo" },
+  {
+    platform: "linkedin",
+    label: "LinkedIn",
+    url: "https://www.linkedin.com/in/clent-japhet-poledo-95442618b/",
+  },
 ];
 
 export const sectionHeadings = {

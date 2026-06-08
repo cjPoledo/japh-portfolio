@@ -21,7 +21,7 @@ export function About() {
         ))}
       </div>
 
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
         {aboutContent.skills.map((skill, i) => (
           <ScrollReveal key={skill.category} delay={i * 0.08}>
             <Card className="h-full">
